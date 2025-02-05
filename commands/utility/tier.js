@@ -3,13 +3,13 @@ const { SlashCommandBuilder } = require("discord.js");
 module.exports = {
   data: new SlashCommandBuilder()
     .setName("티어")
-    .setDescription("입력한 엑셀로 티어를 설정합니다.")
+    .setDescription("입력한 파일로 티어를 설정합니다.")
     //첨부파일 옵션 설정
     .addAttachmentOption((option) =>
       option
         .setName("input")
         .setRequired(true)
-        .setDescription("엑셀파일입니다.")
+        .setDescription("csv파일을 첨부해주세요.")
     ),
   async execute(interaction) {
     const user = interaction.user;
